@@ -1,0 +1,36 @@
+{
+  "name": "list",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "build": "rm -rf build && tsc",
+    "dev": "nodemon",
+    "lint": "yarn eslint src --fix --ext .ts,.js",
+    "start:prod": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "Rus203",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^15.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^2.3.0",
+    "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "http-status-codes": "^2.3.0",
+    "uuid": "^11.1.0",
+    "zod": "^4.0.13"
+  }
+}

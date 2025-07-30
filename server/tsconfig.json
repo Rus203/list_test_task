@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"lib": ["ES6", "ES2017", "ESNext"],
+		"sourceMap": true,
+		"outDir": "./build",
+		"rootDir": "./src",
+		"removeComments": true,
+		"strict": true,
+		"strictNullChecks": true,
+		"noUnusedParameters": false,
+		"moduleResolution": "node",
+		"baseUrl": "./",
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"typeRoots": ["node_modules/@types", "src/@types"],
+		"paths": {
+			"@/*": ["src/*"]
+		}
+	},
+	"exclude": ["node_modules"],
+	"include": ["./src/**/*"]
+}

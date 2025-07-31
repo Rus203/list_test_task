@@ -1,0 +1,42 @@
+services:
+  back:
+    container_name: back_container
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      target: development
+    restart: always
+    ports:
+      - 3000:3000
+    command: ["yarn", "start:prod"]
+
+  front:
+    container_name: front_container
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      target: development
+    restart: "no"
+    volumes:
+      - front_dist:/usr/src/app/dist
+    command: ["yarn", "build"]
+
+  nginx:
+    container_name: nginx
+    image: nginx:1.21.3
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: host
+    depends_on:
+      - back
+      - front
+    volumes:
+      - "./nginx.conf:/etc/nginx/nginx.conf"
+      - front_dist:/usr/share/nginx/html 
+    command: [nginx-debug, "-g", "daemon off;"]
+
+
+volumes:
+  front_dist:

@@ -3,7 +3,7 @@ import axios from "axios";
 import type { TaskType } from "../types";
 
 // todo: move it to env file
-const API = "http://localhost:3000/api/list";
+const API = import.meta.env.VITE_SERVER_API;
 
 export function useTasks({
   page = 1,

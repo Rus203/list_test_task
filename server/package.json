@@ -2,7 +2,7 @@
   "name": "list",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "start": "ts-node src/index.ts",
     "build": "rm -rf build && tsc",
     "dev": "nodemon",
     "lint": "yarn eslint src --fix --ext .ts,.js",
@@ -24,7 +24,7 @@
     "prettier": "^2.3.0",
     "ts-node-dev": "^1.1.6",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^4.2.4"
+    "typescript": "5.5.3"
   },
   "dependencies": {
     "cors": "^2.8.5",

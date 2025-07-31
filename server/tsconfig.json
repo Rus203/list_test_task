@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "es6",
+		"target": "ESNext",
 		"module": "commonjs",
 		"lib": ["ES6", "ES2017", "ESNext"],
 		"sourceMap": true,
@@ -22,5 +22,9 @@
 		}
 	},
 	"exclude": ["node_modules"],
-	"include": ["./src/**/*"]
+	"include": ["./src/**/*"],
+
+	"ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }
